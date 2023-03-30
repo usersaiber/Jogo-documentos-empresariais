@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <h3>Criador Cleiton teixeira</h3>
+	<title>Jogo de Correspondência de Documentos Empresariais</title>
+</head>
+</style>
+<body>
+	<h1>Jogo de Correspondência de Documentos Empresariais</h1>
+	<p>Selecione o tipo de documento correto para cada descrição abaixo:</p>
+	<form>
+		<table>
+			<tr>
+				<td>1. Descreve os bens ou serviços vendidos</td>
+				<td><select name="resposta1">
+						<option value="fatura">Fatura</option>
+						<option value="nota">Nota fiscal</option>
+						<option value="recibo">Recibo</option>
+						<option value="ordem">Ordem de compra</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>2. Comprova que o pagamento foi feito</td>
+				<td><select name="resposta2">
+						<option value="fatura">Fatura</option>
+						<option value="nota">Nota fiscal</option>
+						<option value="recibo">Recibo</option>
+						<option value="ordem">Ordem de compra</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>3. Comprova a entrega dos bens ou serviços</td>
+				<td><select name="resposta3">
+						<option value="fatura">Fatura</option>
+						<option value="nota">Nota fiscal</option>
+						<option value="recibo">Recibo</option>
+						<option value="ordem">Ordem de compra</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>4. Solicita a compra de bens ou serviços</td>
+				<td><select name="resposta4">
+						<option value="fatura">Fatura</option>
+						<option value="nota">Nota fiscal</option>
+						<option value="recibo">Recibo</option>
+						<option value="ordem">Ordem de compra</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<input type="button" value="Verificar Respostas" onclick="verificarRespostas()">
+	</form>
+	<p id="resultado"></p>
+    <script>
+function verificarRespostas() {
+    var resposta1 = document.getElementsByName("resposta1")[0].value;
+    var resposta2 = document.getElementsByName("resposta2")[0].value;
+    var resposta3 = document.getElementsByName("resposta3")[0].value;
+    var resposta4 = document.getElementsByName("resposta4")[0].value;
+
+    if(resposta1 == "fatura" && resposta2 == "recibo" && resposta3 == "nota" && resposta4 == "ordem") {
+        document.getElementById("resultado").innerHTML = "Parabéns!";
+    } else {
+        document.getElementById("resultado").innerHTML = "Respostas incorretas. Tente novamente.";
+    }
+}
+
+</script>
+    
